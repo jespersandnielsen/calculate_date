@@ -1,0 +1,35 @@
+name: CI/CD Pipeline
+on:
+  push:
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - README.md
+  pull_request:
+
+concurrency:
+  group: ${{ github.ref }}-rspec
+  cancel-in-progress: true
+
+jobs:
+  rspec:
+    name: Run RSpec Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby:
+          - "3.1"
+          - "3.2"
+          - "3.3"
+          - "3.4"
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true

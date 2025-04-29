@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jesper.sand.nielsen@gmail.com"]
 
   spec.summary       = %q{A gem for parsing string timespans to DateTime}
-  spec.homepage      = "https://github.com/prograsdk/calculate_date"
+  spec.homepage      = "https://github.com/jespersandnielsen/calculate_date"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -19,8 +19,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/prograsdk/calculate_date"
-    spec.metadata["changelog_uri"] = "https://github.com/prograsdk/calculate_date/blob/master/CHANGELOG.md"
+    spec.metadata["source_code_uri"] = "https://github.com/jespersandnielsen/calculate_date"
+    spec.metadata["changelog_uri"] = "https://github.com/jespersandnielsen/calculate_date/blob/master/CHANGELOG.md"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -35,8 +35,5 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.17"
-  spec.add_development_dependency "rake", ">= 12.3.3"
-  spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "fe_core_ext", "~> 0.10.0"
+  spec.add_development_dependency "fe_core_ext", "~> 0.37.0"
 end
