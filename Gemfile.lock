@@ -129,7 +129,7 @@ GEM
     uri (1.0.3)
 
 PLATFORMS
-  arm64-darwin-24
+  arm64-darwin
   ruby
   x86_64-linux
 
